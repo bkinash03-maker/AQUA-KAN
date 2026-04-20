@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kontakt - AQUA-KAN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e7e2da",
+                        "on-primary-fixed-variant": "#394b39",
+                        "primary": "#172819",
+                        "on-primary-fixed": "#0e1f10",
+                        "surface-bright": "#fef9f1",
+                        "on-background": "#1d1c17",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#747871",
+                        "surface-dim": "#ded9d2",
+                        "on-surface-variant": "#434842",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-error": "#ffffff",
+                        "background": "#fef9f1",
+                        "on-tertiary-fixed-variant": "#574335",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f8f3eb",
+                        "on-primary-container": "#94a993",
+                        "on-secondary-container": "#785d00",
+                        "tertiary-fixed": "#fbddca",
+                        "on-surface": "#1d1c17",
+                        "on-tertiary-container": "#ba9f8e",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#f2ede5",
+                        "secondary-container": "#fed977",
+                        "inverse-on-surface": "#f5f0e8",
+                        "inverse-surface": "#32302b",
+                        "primary-fixed-dim": "#b7ccb5",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-container-high": "#ece8e0",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e7e2da",
+                        "error": "#ba1a1a",
+                        "secondary": "#755b00",
+                        "tertiary": "#322115",
+                        "secondary-fixed": "#ffe08f",
+                        "primary-container": "#2c3e2d",
+                        "primary-fixed": "#d3e8d0",
+                        "surface-tint": "#506350",
+                        "outline-variant": "#c3c8c0",
+                        "tertiary-container": "#493629",
+                        "surface": "#fef9f1",
+                        "inverse-primary": "#b7ccb5",
+                        "secondary-fixed-dim": "#e6c364",
+                        "tertiary-fixed-dim": "#dec1af",
+                        "on-tertiary-fixed": "#28180d",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#fef9f1]/80 backdrop-blur-md shadow-sm shadow-[#3d2b1f]/5">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a href="index.html" class="font-headline text-2xl font-bold tracking-tighter text-[#172819]">AQUA-KAN</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline text-lg font-medium leading-relaxed tracking-tight text-[#434842] hover:text-[#755b00] transition-colors duration-300" href="index.html">Strona główna</a>
+<a class="font-headline text-lg font-medium leading-relaxed tracking-tight text-[#434842] hover:text-[#755b00] transition-colors duration-300" href="o-firmie.html">O firmie</a>
+<a class="font-headline text-lg font-medium leading-relaxed tracking-tight text-[#434842] hover:text-[#755b00] transition-colors duration-300" href="uslugi.html">Usługi</a>
+<a class="font-headline text-lg font-medium leading-relaxed tracking-tight text-[#434842] hover:text-[#755b00] transition-colors duration-300" href="opinie.html">Opinie</a>
+<a class="font-headline text-lg font-semibold leading-relaxed tracking-tight text-[#755b00]" href="kontakt.html">Kontakt</a>
+</div>
+<a class="bg-primary hover:bg-primary-container text-on-primary font-label text-sm font-medium py-3 px-6 rounded-md transition-all duration-300 hidden md:block" href="tel:787231787">
+                Zadzwoń teraz
+            </a>
+<button id="menu-btn" class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="md:hidden bg-[#fef9f1]/95 backdrop-blur-md px-8 py-6 flex flex-col gap-4 border-t border-surface-container-high">
+  <a class="font-headline text-lg text-[#434842]" href="index.html">Strona główna</a>
+  <a class="font-headline text-lg text-[#434842]" href="o-firmie.html">O firmie</a>
+  <a class="font-headline text-lg text-[#434842]" href="uslugi.html">Usługi</a>
+  <a class="font-headline text-lg text-[#434842]" href="opinie.html">Opinie</a>
+  <a class="font-headline text-lg font-semibold text-[#755b00]" href="kontakt.html">Kontakt</a>
+  <a class="bg-primary text-on-primary px-6 py-3 rounded-md font-label font-medium text-center mt-2" href="tel:787231787">Zadzwoń teraz</a>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header -->
+<header class="mb-16 md:mb-24 text-center md:text-left max-w-3xl">
+<h1 class="font-headline text-4xl md:text-6xl font-semibold tracking-[-0.02em] text-primary mb-6">Porozmawiajmy o przepływie.</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
+                Jesteśmy do Twojej dyspozycji. Skontaktuj się z nami w celu umówienia konsultacji lub zgłoszenia problemu z instalacją.
+            </p>
+</header>
+<!-- Contact Section Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+<!-- Contact Info & Map (Left Column) -->
+<div class="lg:col-span-5 flex flex-col gap-12">
+<!-- Quick Contact -->
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl">
+<h2 class="font-headline text-2xl font-medium text-primary mb-8">Dane kontaktowe</h2>
+<div class="flex flex-col gap-8">
+<a class="group flex items-start gap-4" href="tel:787231787">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label text-sm text-on-surface-variant mb-1">Infolinia</p>
+<p class="font-headline text-3xl font-semibold text-primary group-hover:text-secondary transition-colors duration-300 tracking-tight">787 231 787</p>
+</div>
+</a>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label text-sm text-on-surface-variant mb-1">Adres</p>
+<p class="font-body text-lg text-primary">ul. Jagiellońska 19<br/>31-614 Kraków</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Container -->
+<div class="w-full h-80 rounded-xl overflow-hidden bg-surface-container-high relative">
+<img alt="Map" class="w-full h-full object-cover opacity-80 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw8eRJB4xNx2qIU65Z3zRiXxFTHioY0roPj-AUwxFjQXO3qiDrxEdjH2PizqVaYUkQxqAX99WuYMtzBqhy2qf93NUjfgXpdG8TyMhLBSpg8zhPjcgd37qZrWxi8L3YWGdBuaczQ_fxzx8bmyVJwz3jc2pyatr2Q-y3BrEwsswQk1hvP47e1Acu8rtznapXYlKKLiq45osjNcZlIuMT-rY0GJe4VoH03Ah7K-cI4NhodAjyMLdPyEQrKsJg3gHtrWdlTBgWiiIhnk6p"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary text-5xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<!-- Form (Right Column) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_8px_32px_rgba(61,43,31,0.04)]">
+<h2 class="font-headline text-3xl font-medium text-primary mb-8">Napisz do nas</h2>
+<form class="flex flex-col gap-8" onsubmit="handleSubmit(event)">
+<!-- Name -->
+<div class="relative group">
+<input class="block w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 text-on-surface font-body text-lg focus:ring-0 focus:border-b-2 focus:border-primary peer transition-colors duration-300" id="name" name="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-body text-lg transition-all duration-300 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-primary peer-focus:font-medium peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-sm peer-[&:not(:placeholder-shown)]:font-medium pointer-events-none" for="name">Imię i nazwisko</label>
+</div>
+<!-- Phone -->
+<div class="relative group">
+<input class="block w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 text-on-surface font-body text-lg focus:ring-0 focus:border-b-2 focus:border-primary peer transition-colors duration-300" id="phone" name="phone" placeholder=" " type="tel"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-body text-lg transition-all duration-300 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-primary peer-focus:font-medium peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-sm peer-[&:not(:placeholder-shown)]:font-medium pointer-events-none" for="phone">Telefon</label>
+</div>
+<!-- Problem Type -->
+<div class="relative">
+<select class="block w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 text-on-surface font-body text-lg focus:ring-0 focus:border-b-2 focus:border-primary appearance-none cursor-pointer" id="problem" name="problem">
+<option class="text-on-surface-variant" disabled="" selected="" value="">Rodzaj problemu</option>
+<option value="awaria">Awaria instalacji</option>
+<option value="wycena">Wycena nowej instalacji</option>
+<option value="przeglad">Przegląd / Serwis</option>
+<option value="inne">Inne</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-3 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+<!-- Message -->
+<div class="relative group mt-4">
+<textarea class="block w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 text-on-surface font-body text-lg focus:ring-0 focus:border-b-2 focus:border-primary peer transition-colors duration-300 resize-none" id="message" name="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 top-3 text-on-surface-variant font-body text-lg transition-all duration-300 peer-focus:-top-4 peer-focus:text-sm peer-focus:text-primary peer-focus:font-medium peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-sm peer-[&:not(:placeholder-shown)]:font-medium pointer-events-none" for="message">Wiadomość</label>
+</div>
+<!-- Submit -->
+<div class="mt-8">
+<button class="bg-secondary hover:bg-[#8f6f00] text-on-secondary font-label text-base font-medium py-4 px-10 rounded-md transition-colors duration-300 w-full sm:w-auto inline-flex items-center justify-center gap-2" type="submit">
+                                Wyślij wiadomość
+                                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 bg-[#172819]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 max-w-7xl mx-auto">
+<div>
+<div class="font-['Noto_Serif'] text-3xl font-bold text-[#fef9f1] mb-6">AQUA-KAN</div>
+<p class="font-['Inter'] text-sm uppercase tracking-widest text-[#ece8e0]/80">© 2024 AQUA-KAN. Wszelkie prawa zastrzeżone. Rzemiosło i Tradycja.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-['Inter'] text-sm uppercase tracking-widest text-[#ece8e0]/60 hover:text-[#ffffff] hover:underline underline-offset-4 transition-all duration-300" href="#">ul. Jagiellońska 19, 31-614 Kraków</a>
+<a class="font-['Inter'] text-sm uppercase tracking-widest text-[#ece8e0]/60 hover:text-[#ffffff] hover:underline underline-offset-4 transition-all duration-300" href="tel:787231787">787 231 787</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-['Inter'] text-sm uppercase tracking-widest text-[#ece8e0]/60 hover:text-[#ffffff] hover:underline underline-offset-4 transition-all duration-300" href="index.html">Strona główna</a>
+<a class="font-['Inter'] text-sm uppercase tracking-widest text-[#ece8e0]/60 hover:text-[#ffffff] hover:underline underline-offset-4 transition-all duration-300" href="o-firmie.html">O firmie</a>
+<a class="font-['Inter'] text-sm uppercase tracking-widest text-[#ece8e0]/60 hover:text-[#ffffff] hover:underline underline-offset-4 transition-all duration-300" href="uslugi.html">Usługi</a>
+<a class="font-['Inter'] text-sm uppercase tracking-widest text-[#ffe08f] hover:text-[#ffffff] hover:underline underline-offset-4 transition-all duration-300" href="kontakt.html">Kontakt</a>
+</div>
+</footer>
+<script>
+  document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.textContent = 'Wysłano! Odezwiemy się wkrótce.';
+    btn.disabled = true;
+    btn.classList.add('opacity-70', 'cursor-not-allowed');
+  }
+</script>
+</body></html>
